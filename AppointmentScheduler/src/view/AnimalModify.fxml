@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="589.0" prefWidth="910.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AnimalModify">
+    <children>
+        <Button id="otherButtons" layoutX="286.0" layoutY="507.0" mnemonicParsing="false" onAction="#animalSaveBtn" prefWidth="100.0" text="Save" />
+        <TableView fx:id="viewAllNotes" layoutX="380.0" layoutY="86.0" prefHeight="314.0" prefWidth="506.0">
+            <columns>
+                <TableColumn fx:id="viewNoteId" prefWidth="75.0" text="Note ID" />
+                <TableColumn fx:id="viewNotes" prefWidth="191.05453491210938" text="Notes" />
+                <TableColumn fx:id="viewLastUpdated" prefWidth="124.00006103515625" text="Last Updated" />
+                <TableColumn fx:id="viewCreated" minWidth="5.054443359375" prefWidth="108.109130859375" text="Created" />
+            </columns>
+        </TableView>
+        <Button id="otherButtons" layoutX="380.0" layoutY="417.0" mnemonicParsing="false" onAction="#noteEditBtn" text="Edit Note" />
+        <Button id="otherButtons" layoutX="598.0" layoutY="417.0" mnemonicParsing="false" onAction="#noteNewBtn" text="New Note" />
+        <Button id="otherButtons" layoutX="804.0" layoutY="417.0" mnemonicParsing="false" onAction="#noteDeleteBtn" text="Delete Note" />
+        <Button id="otherButtons" layoutX="497.0" layoutY="507.0" mnemonicParsing="false" onAction="#cancelBtn" prefWidth="100.0" text="Cancel" />
+        <Label layoutX="369.0" layoutY="25.0" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Modify An Animal" />
+        <GridPane layoutX="71.0" layoutY="86.0" prefHeight="331.0" prefWidth="252.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="121.12724372296306" minWidth="10.0" prefWidth="88.83635016827556" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="164.7636572971818" minWidth="10.0" prefWidth="163.89091559796304" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label text="Animal ID:" />
+                <TextField fx:id="animalIdField" editable="false" GridPane.columnIndex="1" />
+                <Label prefHeight="18.0" prefWidth="87.0" text="Animal Name:" GridPane.rowIndex="1" />
+                <TextField fx:id="animalNameTxt" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Label text="Animal Type:" GridPane.rowIndex="2" />
+                <ComboBox fx:id="animalTypeTxt" prefHeight="26.0" prefWidth="163.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Dog" />
+                            <String fx:value="Cat" />
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <Label text="Animal Age:" GridPane.rowIndex="3" />
+                <TextField fx:id="animalAgeTxt" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <Label text="Animal Breed:" GridPane.rowIndex="4" />
+                <TextField fx:id="animalBreedTxt" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                <Label text="Animal Weight:" GridPane.rowIndex="5" />
+                <TextField fx:id="animalWeightTxt" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                <Label text="Animal Owner:" GridPane.rowIndex="6" />
+                <ComboBox fx:id="animalOwnerTxt" prefHeight="26.0" prefWidth="163.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            </children>
+        </GridPane>
+    </children>
+</AnchorPane>

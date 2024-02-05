@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.NoteAdd">
+    <children>
+        <TextArea fx:id="addNoteField" layoutX="151.0" layoutY="106.0" prefHeight="202.0" prefWidth="367.0" />
+        <Label layoutX="88.0" layoutY="106.0" text="Notes" />
+        <Label layoutX="88.0" layoutY="38.0" text="Note ID#" />
+        <TextField fx:id="addNoteId" editable="false" layoutX="159.0" layoutY="34.0" text="auto generated" />
+        <Button id="otherButtons" layoutX="182.0" layoutY="345.0" mnemonicParsing="false" onAction="#addSaveBtn" prefWidth="75.0" text="Save" />
+        <Button id="otherButtons" layoutX="378.0" layoutY="346.0" mnemonicParsing="false" onAction="#addCancelBtn" prefWidth="75.0" text="Cancel" />
+        <Label fx:id="animalIdLabel" layoutX="349.0" layoutY="47.0" text="Label" visible="false" />
+    </children>
+</AnchorPane>

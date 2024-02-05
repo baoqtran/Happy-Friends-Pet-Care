@@ -1,0 +1,60 @@
+/* Each row in the table is a table-row-cell. Inside a table-row-cell is any
+   number of table-cell. */
+
+   .root{
+       -fx-background-color: #FFFFFF;
+         -fx-font-size: 13px;
+         -fx-background-image: url("background.png");
+   }
+#menuButtons {
+-fx-background-color: transparent;
+    -fx-background-insets: 0,0,0;
+    -fx-background-radius: 0,0,0;
+    -fx-padding: 6 6 6 6;
+    -fx-text-fill: black;
+-fx-font-weight: bold;
+    -fx-font-size: 13px;
+     -fx-background-insets: 0,1,2;
+        -fx-background-radius: 3,2,1;
+}
+
+#menuButtons:hover {
+ -fx-background-color: #0096c9;
+ -fx-text-fill: white;
+   -fx-padding: 6 6 6 6;
+ -fx-background-insets: 0,1,2;
+    -fx-background-radius: 3,2,1;
+    -fx-alignment: CENTER;
+    -fx-content-display: CENTER;}
+
+
+#otherButtons {
+ -fx-background-color:
+        #a4dadc,
+        linear-gradient(#fcfcfc, #f3f3f3),
+        linear-gradient(#a4dadc 0%, #a4dadc 49%, #a4dadc 50%, #97c6c8 100%);
+    -fx-background-insets: 0,1,2;
+    -fx-background-radius: 3,2,1;
+    -fx-padding: 5 10 5 10;
+    -fx-text-fill: black;
+-fx-font-weight: bold;
+    -fx-font-size: 13px;
+   -fx-height: 50px;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.4) , 5, 0.0 , 0 , 1 );
+}
+   .table-row-cell {
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */
+ //   -fx-cell-size: 2.0em; /* 24 */
+ //   -fx-cell-height: 5.0em;
+    -fx-wrap-text: true;
+    }
+
+.text-field {
+    -fx-background-color: -fx-text-box-border, -fx-background ;
+    -fx-background-insets: 0, 0 0 1 0 ;
+    -fx-background-radius: 0 ;
+}
+.text-field:focused {
+    -fx-background-color: -fx-focus-color, -fx-background ;
+}

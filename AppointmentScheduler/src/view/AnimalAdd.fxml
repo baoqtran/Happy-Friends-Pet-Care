@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="528.0" prefWidth="910.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AnimalAdd">
+    <children>
+        <TextField fx:id="animalNameTxt" layoutX="183.0" layoutY="68.0" />
+        <Label layoutX="89.0" layoutY="72.0" prefHeight="18.0" prefWidth="87.0" text="Animal Name:" />
+        <ComboBox fx:id="animalTypeTxt" layoutX="183.0" layoutY="122.0" prefWidth="150.0">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Dog" />
+                    <String fx:value="Cat" />
+                </FXCollections>
+            </items>
+        </ComboBox>
+        <Label layoutX="89.0" layoutY="126.0" text="Animal Type:" />
+        <TextField fx:id="animalAgeTxt" layoutX="183.0" layoutY="174.0" />
+        <Label layoutX="89.0" layoutY="178.0" text="Animal Age:" />
+        <TextField fx:id="animalBreedTxt" layoutX="183.0" layoutY="232.0" />
+        <Label layoutX="86.0" layoutY="236.0" text="Animal Breed:" />
+        <TextField fx:id="animalWeightTxt" layoutX="183.0" layoutY="289.0" />
+        <Label layoutX="82.0" layoutY="293.0" text="Animal Weight:" />
+        <Label layoutX="84.0" layoutY="348.0" text="Animal Owner:" />
+        <Button id="otherButtons" layoutX="258.0" layoutY="432.0" mnemonicParsing="false" onAction="#animalSaveBtn" prefWidth="100.0" text="Save" />
+        <TextArea fx:id="noteText" layoutX="388.0" layoutY="168.0" prefHeight="202.0" prefWidth="385.0" />
+        <Label layoutX="388.0" layoutY="135.0" text="Notes" />
+        <ComboBox fx:id="animalOwnerTxt" layoutX="183.0" layoutY="344.0" prefWidth="150.0" />
+        <Button id="otherButtons" layoutX="530.0" layoutY="432.0" mnemonicParsing="false" onAction="#cancelBtn" prefWidth="100.0" text="Cancel" />
+        <Label layoutX="374.0" layoutY="25.0" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Add A New Animal" />
+    </children>
+</AnchorPane>

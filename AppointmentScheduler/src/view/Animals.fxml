@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane prefHeight="607.0" prefWidth="1176.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Animals">
+    <children>
+        <TableView fx:id="animalView" layoutX="40.0" layoutY="68.0" prefHeight="442.0" prefWidth="1094.0" stylesheets="/test.css">
+            <columns>
+                <TableColumn fx:id="tableId" prefWidth="110.78182983398438" text="Animal ID" />
+                <TableColumn fx:id="tableName" prefWidth="169.27268981933594" text="Animal Name" />
+                <TableColumn fx:id="tableType" prefWidth="129.20001220703125" text="Type" />
+                <TableColumn fx:id="tableAge" prefWidth="86.1817626953125" text="Age" />
+                <TableColumn fx:id="tableBreed" prefWidth="148.581787109375" text="Breed" />
+                <TableColumn fx:id="tableWeight" prefWidth="97.29095458984375" text="Weight" />
+                <TableColumn fx:id="tableOwner" prefWidth="123.7635498046875" text="Owner" />
+            </columns>
+        </TableView>
+        <Button id="otherButtons" layoutX="40.0" layoutY="529.0" mnemonicParsing="false" onAction="#addNewAnimal" prefWidth="125.0" text="Add Animal" />
+        <Button id="otherButtons" layoutX="331.0" layoutY="529.0" mnemonicParsing="false" onAction="#deleteAnimal" prefWidth="125.0" text="Delete Animal" />
+        <Button id="otherButtons" layoutX="185.0" layoutY="529.0" mnemonicParsing="false" onAction="#updateAnimal" prefWidth="125.0" text="Update Animal" />
+        <GridPane layoutX="-1.0" prefHeight="35.0" prefWidth="1176.0" style="-fx-background-color: -fx-focus-color,-fx-background; -fx-background-radius: 0; -fx-background-insets: 0, 0 0 1 0;">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="10.0" minWidth="0.0" prefWidth="10.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1165.0908311254339" minWidth="10.0" prefWidth="1165.0908311254339" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <GridPane prefHeight="31.0" prefWidth="944.0" GridPane.columnIndex="1">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="90.0" minWidth="10.0" prefWidth="90.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="80.0" minWidth="10.0" prefWidth="80.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="110.0" minWidth="10.0" prefWidth="110.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="80.0" minWidth="10.0" prefWidth="80.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Button id="menuButtons" mnemonicParsing="false" onAction="#customerScreen" text="Customer" />
+                        <Button id="menuButtons" mnemonicParsing="false" onAction="#animalScreen" text="Animals" GridPane.columnIndex="1" />
+                        <Button id="menuButtons" mnemonicParsing="false" onAction="#appointmentScreen" text="Appointments" GridPane.columnIndex="2" />
+                        <Button id="menuButtons" mnemonicParsing="false" onAction="#reportsScreen" text="Reports" GridPane.columnIndex="3" />
+                    </children>
+                </GridPane>
+            </children>
+        </GridPane>
+    </children>
+
+</AnchorPane>

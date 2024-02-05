@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="624.0" prefWidth="443.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AppointmentsModify">
+    <children>
+        <AnchorPane layoutX="14.0" layoutY="2.0" prefHeight="624.0" prefWidth="443.0">
+            <children>
+                <GridPane layoutX="64.0" layoutY="70.0" prefHeight="241.0" prefWidth="298.0">
+                    <columnConstraints>
+                        <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="134.39994880108804" minWidth="10.0" prefWidth="103.3454315740413" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="144.87275757844805" minWidth="9.96365512816378" prefWidth="9.96365512816378" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="252.2182318216121" minWidth="10.0" prefWidth="189.47273949993573" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" text="Appointment ID:" textAlignment="RIGHT" />
+                        <Label text="Title:" GridPane.rowIndex="1" />
+                        <Label text="Description:" GridPane.rowIndex="2" />
+                        <Label text="Type:" GridPane.rowIndex="3" />
+                        <Label text="Vet Tech:" GridPane.rowIndex="4" />
+                        <TextField fx:id="appointmentIDTextField" disable="true" prefHeight="26.0" prefWidth="127.0" GridPane.columnIndex="2">
+                            <font>
+                                <Font name="System Bold" size="12.218181610107422" />
+                            </font>
+                        </TextField>
+                        <TextField fx:id="appointmentTitleTextField" prefHeight="26.0" prefWidth="151.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <TextField fx:id="appointmentDescriptionTextField" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <ComboBox fx:id="contactCombo" prefHeight="26.0" prefWidth="179.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                        <ComboBox fx:id="typeCombo" prefWidth="179.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                            <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <String fx:value="New Patient" />
+                                    <String fx:value="Returning - Routine" />
+                                    <String fx:value="Returning - Illness" />
+                                </FXCollections>
+                            </items>
+                        </ComboBox>
+                    </children>
+                </GridPane>
+                <Label layoutX="96.0" layoutY="23.0" text="Modify Existing Appointment">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+                <Button id="otherButtons" fx:id="saveButton" layoutX="108.0" layoutY="567.0" mnemonicParsing="false" onAction="#actionSaveButton" prefWidth="75.0" text="Save" />
+                <Button id="otherButtons" fx:id="cancelButton" layoutX="260.0" layoutY="567.0" mnemonicParsing="false" onAction="#actionCancelButton" prefWidth="75.0" text="Cancel" />
+                <DatePicker fx:id="startDatePicker" layoutX="175.0" layoutY="324.0" prefHeight="26.0" prefWidth="119.0" />
+                <Label layoutX="81.0" layoutY="328.0" text="Start Date/Time" />
+                <ComboBox fx:id="startTimeCombo" layoutX="311.0" layoutY="324.0" prefHeight="26.0" prefWidth="86.0" />
+                <Label layoutX="83.0" layoutY="375.0" text="End Date/Time" />
+                <DatePicker fx:id="endDatePicker" layoutX="175.0" layoutY="370.0" prefHeight="26.0" prefWidth="119.0" />
+                <ComboBox fx:id="endTimeCombo" layoutX="311.0" layoutY="370.0" prefHeight="26.0" prefWidth="86.0" />
+                <ComboBox fx:id="userCombo" layoutX="175.0" layoutY="415.0" prefHeight="26.0" prefWidth="180.0" />
+                <ComboBox fx:id="customerCombo" layoutX="175.0" layoutY="459.0" prefHeight="26.0" prefWidth="180.0" />
+                <Label layoutX="122.0" layoutY="419.0" text="User ID:" />
+                <Label layoutX="109.0" layoutY="463.0" text="Owner ID:" />
+                <ComboBox fx:id="animalCombo" layoutX="175.0" layoutY="507.0" prefWidth="179.0" />
+                <Label layoutX="95.0" layoutY="517.0" text="Animal Id:" />
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
